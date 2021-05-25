@@ -1,0 +1,140 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-25T09:29:03.328Z",
+    "end": "2021-05-25T09:29:09.520Z",
+    "duration": 6192,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6843d3dd-5c1c-46dd-85c3-e32f98219200",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ce98777d-f453-4863-b33b-086a647e3c06",
+          "title": "BSTAR Login Automated Testing",
+          "fullFile": "D:\\Project\\nodejs\\selenium_bstar_admin_panel\\test\\login.test.js",
+          "file": "\\test\\login.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"BSTAR Login Automated Testing\"",
+              "fullTitle": "BSTAR Login Automated Testing \"before each\" hook in \"BSTAR Login Automated Testing\"",
+              "timedOut": false,
+              "duration": 3078,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "page = new Page();\ndriver = page.driver;\nawait driver.manage().window().setRect({width:1024, height: 768});\nawait page.visit(process.env.APP_URL.toString());",
+              "err": {},
+              "uuid": "8e06744b-b61e-41dc-80a2-42a7ac4a8369",
+              "parentUUID": "ce98777d-f453-4863-b33b-086a647e3c06",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"BSTAR Login Automated Testing\"",
+              "fullTitle": "BSTAR Login Automated Testing \"after each\" hook in \"BSTAR Login Automated Testing\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//await page.quit();\nsetTimeout(async () => {\n    console.log(\"Prepartion Close Web After 2 Seconds\");\n    await this.driver.close();\n}, 2000);",
+              "err": {},
+              "uuid": "22d84c9d-b49f-4583-84ed-d6c77f2e4ddf",
+              "parentUUID": "ce98777d-f453-4863-b33b-086a647e3c06",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Do Login",
+              "fullTitle": "BSTAR Login Automated Testing Do Login",
+              "timedOut": false,
+              "duration": 3095,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let result = await page.doLoginSuccess('Scenario1');\nexpect(result.fdata,'Version Login Not Match').to.equal('1.11.7');",
+              "err": {},
+              "uuid": "3722f611-033e-4f2a-b61d-429588674922",
+              "parentUUID": "ce98777d-f453-4863-b33b-086a647e3c06",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3722f611-033e-4f2a-b61d-429588674922"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3095,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 120000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
